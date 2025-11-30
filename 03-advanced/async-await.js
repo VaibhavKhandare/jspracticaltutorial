@@ -1,76 +1,46 @@
-const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+const { productDatabase } = require('../01-datatypes/08_super_quiz');
 
-async function fetchUser(id) {
-  await delay(500);
-  return { id, name: `User${id}`, email: `user${id}@example.com` };
+const randomDelay = () => Math.floor(Math.random() * 500);
+
+const productNames = productDatabase.map(product => product.id);
+
+const buyProduct = (name) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(()=>{resolve(`buyed ${name}`); console.log(`buyed ${name}`)}, randomDelay());
+  });
 }
 
-async function fetchOrders(userId) {
-  await delay(300);
-  return [
-    { id: 1, userId, total: 99.99 },
-    { id: 2, userId, total: 149.99 }
-  ];
+const buyProducts = () =>{
+  productNames.forEach(product => {
+    buyProduct(product);
+  });
 }
+buyProducts();
 
-async function getUserWithOrders(userId) {
-  try {
-    const user = await fetchUser(userId);
-    const orders = await fetchOrders(userId);
-    return { ...user, orders };
-  } catch (error) {
-    console.error('Error:', error);
-    return null;
+
+const buyProductsSync = async() =>{
+  console.log('Buying products...', productNames);
+  for (const product of productNames) {
+    await buyProduct(product);
   }
 }
+buyProductsSync();
 
-getUserWithOrders(1).then(data => console.log(data));
-
-async function fetchMultipleUsers(ids) {
-  const promises = ids.map(id => fetchUser(id));
-  const users = await Promise.all(promises);
-  return users;
+//call some json api and show the result
+const fetchData = async() => {
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const data = await response.json();
+  console.log(data);
 }
+fetchData();
 
-fetchMultipleUsers([1, 2, 3]).then(users => console.log(users));
-
-async function raceExample() {
-  const fast = delay(100).then(() => 'fast');
-  const slow = delay(500).then(() => 'slow');
-  const result = await Promise.race([fast, slow]);
-  console.log(result);
+//call fetch with body and show the result
+const fetchDataWithBody = async() => {
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    body: JSON.stringify({ name: 'John', age: 30 }),
+  });
+  const data = await response.json();
+  console.log(data);
 }
-
-raceExample();
-
-async function processQueue(items) {
-  for (const item of items) {
-    console.log(`Processing ${item}`);
-    await delay(200);
-  }
-  console.log('All items processed');
-}
-
-processQueue(['A', 'B', 'C']);
-
-async function retryOperation(operation, maxRetries = 3) {
-  for (let i = 0; i < maxRetries; i++) {
-    try {
-      return await operation();
-    } catch (error) {
-      if (i === maxRetries - 1) throw error;
-      await delay(1000 * (i + 1));
-    }
-  }
-}
-
-const unreliableOperation = async () => {
-  if (Math.random() > 0.7) {
-    return 'Success!';
-  }
-  throw new Error('Failed');
-};
-
-retryOperation(unreliableOperation)
-  .then(result => console.log(result))
-  .catch(error => console.error(error.message));
+fetchDataWithBody();
