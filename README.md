@@ -27,6 +27,8 @@ node 01-datatypes/08_super_quiz.js
 ```
 
 ### Running the Ecommerce Backend
+make sure have node version of v24.4.1
+
 ```bash
 cd 03-ecommerce-backend
 npm install
