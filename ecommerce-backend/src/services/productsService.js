@@ -8,11 +8,10 @@ const getAllProducts = (filters = {}) => {
 };
 
 const getProductById = (id) => {
-  return store.find(p => p.id === parseInt(id));
 };
 
 const createProduct = (productData) => {
-  const { name, price, available, tags, rating, comments } = productData;
+  const { name, price, available, tags } = productData;
   
   return newProduct;
 };
