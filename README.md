@@ -11,19 +11,23 @@ node 01-datatypes/04_arrays.js
 node 01-datatypes/05_maps.js
 node 01-datatypes/06_Functions.js
 node 01-datatypes/07_Class.js
-node 02-advanced/async-await.js
-node 02-advanced/promises.js
-node 02-advanced/error-handling.js
+node 02-advanced/01_error-handling.js
+node 02-advanced/02_promises.js
+node 02-advanced/03_async-await.js
 ```
 
 ### Running Quizzes
 ```bash
-node 01-datatypes/01_numbers_quiz.js
-node 01-datatypes/02_strings_quiz.js
-node 01-datatypes/03_booleans_quiz.js
-node 01-datatypes/04_arrays_quiz.js
-node 01-datatypes/05_maps_quiz.js
-node 01-datatypes/08_super_quiz.js
+node 01-datatypes/01a_numbers_quiz.js
+node 01-datatypes/02a_strings_quiz.js
+node 01-datatypes/03a_booleans_quiz.js
+node 01-datatypes/04a_arrays_quiz.js
+node 01-datatypes/05a_maps_quiz.js
+node 01-datatypes/08a_super_quiz.js
+node 02-advanced/01a_error-handling_quiz.js
+node 02-advanced/02a_promises_quiz.js
+node 02-advanced/03a_async-await_quiz.js
+node 02-advanced/08a_advanced_super_quiz.js
 ```
 
 ### Running the Ecommerce Backend
@@ -51,9 +55,10 @@ Basic JavaScript data types with practical examples:
 
 ### 02 - Advanced JavaScript
 Modern JavaScript concepts:
-- Async/Await (`async-await.js`)
-- Promises (`promises.js`)
-- Error handling (`error-handling.js`)
+- Error handling (`01_error-handling.js`)
+- Promises (`02_promises.js`)
+- Async/Await (`03_async-await.js`)
+- Super Quiz (`08a_advanced_super_quiz.js`) - Comprehensive order processing system
 
 ### 03 - Ecommerce Backend
 Express.js backend with:
