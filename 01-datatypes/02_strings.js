@@ -2,7 +2,8 @@
 const firstName = 'Salman';
 const lastName = "Khan";
 const string2 = `Salman Khan`
-const fullName = `${firstName} ${lastName}`;
+
+const fullName = `Hii ${firstName} ${lastName}`;
 
 console.log(` Size of Salman: ${"Salman".length}
 | S a l m a n
@@ -30,7 +31,6 @@ const string5 = 'Hello World';
 const string6 = 'Hello World';
 console.log("Same string is true: " + (string5 === string6));
 console.log("String1 is greater than String2: " + (string5 > string6));
-
 
 
 const message = 'Hello World';

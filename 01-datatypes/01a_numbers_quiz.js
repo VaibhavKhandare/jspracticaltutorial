@@ -4,18 +4,6 @@ console.log(`Coffee shop order - Latte $${latteCost} and sandwich $${sandwichCos
 let totalBill;
 console.log(totalBill)
 
-const netflixMonthly = 15.99;
-console.log(`Netflix subscription $${netflixMonthly}/month. How much for a full year?`)
-let yearlySubscription;
-console.log(yearlySubscription)
-
-const baseFare = 2.50;
-const distanceCharge = 12.75;
-const timeCharge = 4.25;
-console.log(`Uber ride - Base $${baseFare}, Distance $${distanceCharge}, Time $${timeCharge}. Total fare?`)
-let uberTotal;
-console.log(uberTotal)
-
 const ps5Price = 499;
 const discountPercent = 20;
 console.log(`Black Friday! PS5 $${ps5Price}, ${discountPercent}% off. What's the sale price?`)
@@ -27,6 +15,24 @@ const people = 3;
 console.log(`Pizza has ${pizzaSlices} slices for ${people} friends. Slices per person? (Round down - no half slices!)`)
 let slicesPerPerson;
 console.log(slicesPerPerson)
+
+console.log(`Restaurant rating 1-5 stars. Generate random rating with point upto two decimal`)
+let randomRating;
+console.log(randomRating)
+
+
+//Additional Questions
+const netflixMonthly = 15.99;
+console.log(`Netflix subscription $${netflixMonthly}/month. How much for a full year?`)
+let yearlySubscription;
+console.log(yearlySubscription)
+
+const baseFare = 2.50;
+const distanceCharge = 12.75;
+const timeCharge = 4.25;
+console.log(`Uber ride - Base $${baseFare}, Distance $${distanceCharge}, Time $${timeCharge}. Total fare?`)
+let uberTotal;
+console.log(uberTotal)
 
 const milesWalkedToday = 5.67;
 console.log(`Fitness app shows ${milesWalkedToday} miles. Round to nearest whole mile`)
@@ -69,10 +75,6 @@ const months = 6;
 console.log(`Gym membership $${gymMonthly}/month for ${months} months. Total rounded down?`)
 let gymTotal;
 console.log(gymTotal)
-
-console.log(`Restaurant rating 1-5 stars. Generate random rating`)
-let randomRating;
-console.log(randomRating)
 
 const buyPrice = 45000;
 const sellPrice = 52500;
