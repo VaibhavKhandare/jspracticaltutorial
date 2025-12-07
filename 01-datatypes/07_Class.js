@@ -32,6 +32,10 @@ class PremiumUser extends User {
     }
     return false;
   }
+  
+  getInfo() {
+    return `${this.username} (${this.email}) has ${this.credits} credits`;
+  }
 }
 
 const premiumUser = new PremiumUser('alice', 'alice@example.com', 100);

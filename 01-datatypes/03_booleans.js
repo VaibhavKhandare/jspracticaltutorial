@@ -18,3 +18,7 @@ if (isActive) {
     console.log("User is not active, completed");
 }
 
+// what is false
+var value = 0 || null || undefined || "" || '' || false;
+console.log(value);
+console.log(value == false);

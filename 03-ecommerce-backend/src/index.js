@@ -1,11 +1,15 @@
+// import express and cors
 const express = require('express');
 const cors = require('cors');
 const productsRouter = require('./routes/products');
 
+// create express app
 const app = express();
 const PORT = process.env.PORT || 8000;
 
+// use cors to allow cors requests
 app.use(cors());
+// use express.json() to parse json requests
 app.use(express.json());
 
 app.use('/api/products', productsRouter);
