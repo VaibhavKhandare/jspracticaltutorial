@@ -1,0 +1,22 @@
+{
+  "name": "javascript-tutorial-quizzes",
+  "version": "1.0.0",
+  "description": "JavaScript tutorial quizzes with Jest tests",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "add-exports": "node scripts/add-exports.js"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "**/*quiz*.js",
+      "!**/node_modules/**",
+      "!**/*answer*.js"
+    ]
+  }
+}

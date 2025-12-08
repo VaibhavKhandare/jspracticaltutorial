@@ -1,13 +1,7 @@
-const tweetDraft = "Just launched my new app! Check it out at myapp.com";
-const charLimit = 280;
-console.log(`Twitter limit ${charLimit} chars. Draft "${tweetDraft}". Is it within limit?`)
-let tweetLength;
-console.log(tweetLength)
-
 const creditCard = "4532015112830366";
 const position = 10;
 console.log(`Credit card "${creditCard}" - Get digit at position ${position} (0-indexed)`)
-let securityDigit;
+let securityDigit = creditCard.charAt(position);
 console.log(securityDigit)
 
 const username = "javascript_dev_2024";

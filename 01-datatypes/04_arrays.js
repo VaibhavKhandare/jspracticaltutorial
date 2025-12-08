@@ -28,7 +28,7 @@ console.log(`Index of orange: ${fruits.indexOf('orange')}`);
 // Slice method - extracts portion of array
 // slice(startIndex, endIndex) - endIndex is exclusive (not included)
 // slice(1, 3) means: start at index 1, end before index 3 (so gets index 1 and 2)
-const sliced = numbers.slice(1, 3);
+const sliced = numbers.slice(1, 30);
 console.log(`Sliced numbers: ${sliced}`);
 
 // Multi-dimensional arrays (arrays within arrays)
@@ -41,6 +41,7 @@ console.log(`Element at row 1, column 1: ${matrix[1][1]}`);
 
 // Array destructuring - extract elements into variables
 // ...rest collects remaining elements into array
+// 1 2 3 4 5
 const [first, second, ...rest] = numbers;
 console.log(`First: ${first}, Second: ${second}, Rest: ${rest}`);
 
@@ -50,7 +51,7 @@ const fruitsArray = csv.split(',');
 console.log(`Fruits array: ${fruitsArray}`);
 
 // Converting array to string using join
-const fruitsString = fruits.join(',');
+const fruitsString = allFruits.join(',');
 console.log(`Fruits string: ${fruitsString}`);
 
 // Iterrating over array using for...of loop
@@ -62,15 +63,6 @@ for (const index in fruits) {
   console.log(`Index: ${index}, Fruit: ${fruits[index]}`);
 }
 
-// Iterrating over array using forEach method
-fruits.forEach(fruit => {
-  console.log(`Fruit: ${fruit}`);
-});
-
-fruits.forEach((fruit, index) => {
-  console.log(`Index: ${index}, Fruit: ${fruit}`);
-});
-
 // sort fruits array in ascending order
 fruits.sort();
 console.log(`Sorted fruits: ${fruits}`);
@@ -79,9 +71,8 @@ console.log(`Sorted fruits: ${fruits}`);
 fruits.sort().reverse();
 console.log(`Sorted fruits in descending order: ${fruits}`);
 
-// sort fruits array in ascending order by length
-fruits.sort((a, b) => a.length - b.length);
-console.log(`Sorted fruits in ascending order by length: ${fruits}`);
-
-fruits.filter(fruit => fruit.length > 5);
-console.log(`Fruits with length greater than 5: ${fruits}`);
+const newSet = new Set(['apple','banana']);
+newSet.add('apple');
+console.log(`New set: ${newSet}`);
+newSet.delete('apple');
+console.log(`New set after deleting apple: ${newSet}`);

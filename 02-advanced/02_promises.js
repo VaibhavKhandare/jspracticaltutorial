@@ -15,7 +15,7 @@ const fetchData = () => {
       } else {
         reject(new Error('API failed'));
       }
-    }, 500);
+    }, 50);
   });
 };
 
@@ -58,27 +58,6 @@ const slowPromise = new Promise(resolve => setTimeout(() => resolve('Slow'), 500
 
 Promise.race([fastPromise, slowPromise])
   .then(winner => console.log('Winner:', winner));
-
-function promisify(callback) {
-  return function(...args) {
-    return new Promise((resolve, reject) => {
-      callback(...args, (error, result) => {
-        if (error) reject(error);
-        else resolve(result);
-      });
-    });
-  };
-}
-
-const readFile = (filename, callback) => {
-  setTimeout(() => {
-    callback(null, `Contents of ${filename}`);
-  }, 100);
-};
-
-const readFilePromise = promisify(readFile);
-readFilePromise('file.txt')
-  .then(contents => console.log(contents));
 
 Promise.resolve()
   .then(() => console.log('1'))

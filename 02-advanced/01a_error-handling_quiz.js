@@ -1,7 +1,9 @@
 console.log('=== E-commerce Checkout System ===')
 
 const processCheckout = (cartTotal, discountCode) => {
-  console.log(`User checking out with $${cartTotal} cart. Apply discount code "${discountCode}". Handle invalid codes gracefully`)
+  console.log(`User checking out with $${cartTotal} cart. 
+    Apply discount code "${discountCode}". 
+    Handle invalid codes gracefully`)
   const validCodes = { SAVE10: 0.1, SAVE20: 0.2, WELCOME: 0.15 }
   try {
     if (!validCodes[discountCode]) {

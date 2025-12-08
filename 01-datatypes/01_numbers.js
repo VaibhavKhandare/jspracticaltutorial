@@ -35,5 +35,7 @@ console.log(
 
 console.log(
 `Total of price 19.99 and quantity 3: 19.99 * 3 = ${19.49999 * 3} 
-Formated to 2 decimal places: Number((19.99 * 3).toFixed(2)) = ${Number((19.49999 * 3).toFixed(2))}`);
+Formated to 2 decimal places: Number((19.99 * 3).toFixed(2)) = ${Number((19.49999 * 3).toFixed(2))} 
+
+${Math.round(19.999*100)/100}`);
 

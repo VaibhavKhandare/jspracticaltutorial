@@ -1,3 +1,9 @@
+const tweetDraft = "Just launched my new app! Check it out at myapp.com";
+const charLimit = 280;
+console.log(`Twitter limit ${charLimit} chars. Draft "${tweetDraft}". Is it within limit?`)
+let tweetLength;
+console.log(tweetLength)
+
 const userAge = 17;
 const minAge = 18;
 console.log(`User age ${userAge}. Can they watch ${minAge}+ movie?`)

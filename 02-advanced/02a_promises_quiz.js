@@ -18,7 +18,7 @@ const checkInventory = (productId) => {
 const sendEmailConfirmation = (orderId) => {
   console.log(`Order ${orderId} placed! Send confirmation email. Promise resolves after 2 seconds with 'Email sent'`)
   // TODO: Create a Promise that resolves after 2 seconds with 'Email sent'
-  let emailPromise;
+  let emailPromise ;
   console.log(emailPromise)
   return emailPromise
 }

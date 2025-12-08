@@ -1,23 +1,23 @@
 const latteCost = 4.50;
 const sandwichCost = 8.75;
 console.log(`Coffee shop order - Latte $${latteCost} and sandwich $${sandwichCost}. What's your total?`)
-let totalBill;
+let totalBill = latteCost + sandwichCost;
 console.log(totalBill)
 
 const ps5Price = 499;
 const discountPercent = 20;
 console.log(`Black Friday! PS5 $${ps5Price}, ${discountPercent}% off. What's the sale price?`)
-let ps5SalePrice;
+let ps5SalePrice = ps5Price * (1 - discountPercent / 100);
 console.log(ps5SalePrice)
 
 const pizzaSlices = 8;
 const people = 3;
 console.log(`Pizza has ${pizzaSlices} slices for ${people} friends. Slices per person? (Round down - no half slices!)`)
-let slicesPerPerson;
+let slicesPerPerson=Math.floor(pizzaSlices / people);
 console.log(slicesPerPerson)
 
 console.log(`Restaurant rating 1-5 stars. Generate random rating with point upto two decimal`)
-let randomRating;
+let randomRating=Math.random()*4+1;
 console.log(randomRating)
 
 

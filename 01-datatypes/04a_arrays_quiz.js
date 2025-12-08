@@ -1,6 +1,6 @@
 const shoppingCart = ['milk', 'bread', 'eggs', 'cheese'];
 console.log(`Shopping cart ${shoppingCart}. Get first item`)
-let firstItem;
+let firstItem = shoppingCart[0];
 console.log(firstItem)
 
 const playlist = ['Song A', 'Song B', 'Song C', 'Song D', 'Song E'];
