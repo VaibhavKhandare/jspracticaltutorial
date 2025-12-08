@@ -1,4 +1,4 @@
-# JavaScript Tutorial Project
+# Practical JavaScript Topics 
 
 A structured JavaScript learning repository covering fundamentals to advanced concepts with practical examples.
 
